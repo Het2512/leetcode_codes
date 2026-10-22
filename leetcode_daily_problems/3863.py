@@ -16,7 +16,7 @@ class Solution:
         if n == 2:
             return -1
 
-        # Check if minimum appears anywhere before the last position
+        # Check if minimum app  ears anywhere before the last position
         # OR maximum appears anywhere after the first position
         if mn in s[:-1] or mx in s[1:]:
             return 2
