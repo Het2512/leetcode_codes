@@ -21,14 +21,13 @@ class Solution:
 
                 curr = edge[curr]
 
-            # Check whether we found a cycle
+            # Check if a cycle exists in the current path
             if curr != -1 and curr in path:
-                cycle_sum = 0
 
-                # Sum all nodes belonging to the cycle
-                for node in path:
-                    if path[node] >= path[curr]:
-                        cycle_sum += node
+                cycle_sum = sum(
+                    node for node in path
+                    if path[node] >= path[curr]
+                )
 
                 ans = max(ans, cycle_sum)
 
